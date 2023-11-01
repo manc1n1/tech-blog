@@ -5,6 +5,9 @@
 [![License](https://img.shields.io/github/license/manc1n1/tech-blog.svg?style=for-the-badge)](https://github.com/manc1n1/tech-blog/blob/master/LICENSE)
 [![nodejs][node.js]][nodejs-url]
 [![mysql][mysql]][mysql-url]
+[![expressjs][express.js]][express-url]
+[![handlebarsjs][handlebars.js]][handlebars-url]
+[![dotenv][.env]][.env-url]
 
 </div>
 
@@ -83,3 +86,9 @@ Don't forget to give the project a star! Thanks again!
 [nodejs-url]: https://nodejs.org/
 [mysql]: https://img.shields.io/badge/mysql-fff?style=for-the-badge&logo=mysql
 [mysql-url]: https://www.mysql.com/
+[express.js]: https://img.shields.io/badge/express-555?style=for-the-badge&logo=express
+[express-url]: https://expressjs.com/
+[handlebars.js]: https://img.shields.io/badge/handlebars-f0772b?style=for-the-badge&logo=handlebarsdotjs
+[handlebars-url]: https://handlebarsjs.com/
+[.env]: https://img.shields.io/badge/dotenv-000?style=for-the-badge&logo=dotenv
+[.env-url]: https://www.dotenv.org/
