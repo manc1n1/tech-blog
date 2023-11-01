@@ -39,7 +39,7 @@ Model-View-Controller (MVC) Challenge: Tech Blog
 2.  Change directories to `tech-blog`
 
     ```sh
-    cd employee-tracker
+    cd tech-blog
     ```
 
 3.  Install NPM packages
