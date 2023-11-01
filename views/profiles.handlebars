@@ -1,0 +1,40 @@
+{{#each posts as |post|}}
+	<h3>
+		<a
+			href='/post/{{post.id}}'
+			style='color: #a6e3a1; text-decoration: none;'
+		>
+			{{post.title}}
+		</a>
+		<p style='color: #a6adc8;'>
+			Posted by
+			<a
+				href='/profile/{{post.user_id}}'
+				style='color: #cba6f7; text-decoration: none;'
+			>
+				{{post.User.username}}
+			</a>
+			on
+			{{format_date post.date_created}}
+		</p>
+	</h3>
+	<p style='color: #cdd6f4;'>
+		{{post.content}}
+	</p>
+	{{#if ../logged_in}}
+		<section class='text-right'>
+			<button
+				class='btn btn-link'
+				id='comment-post'
+				value={{post.id}}
+				style='color: #cdd6f4;'
+			>
+				Comment
+			</button>
+		</section>
+	{{/if}}
+	<hr class='rounded' style='color: #6c7086;' />
+{{/each}}
+{{#if logged_in}}
+	<script src='/js/commentPost.js'></script>
+{{/if}}

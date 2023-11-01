@@ -1,0 +1,61 @@
+<section class='text-right'>
+	<a href='/new_post'>
+		<button class='btn btn-info' id='new-post' style='color: #cdd6f4;'>
+			New Post
+		</button>
+	</a>
+</section>
+
+{{#if posts.length}}
+	<section class='post-list'>
+		{{#each posts as |post|}}
+			<h3>
+				<a
+					href='/post/{{post.id}}'
+					style='color: #a6e3a1; text-decoration: none;'
+				>
+					{{post.title}}
+				</a>
+				<p style='color: #a6adc8;'>
+					Posted by
+					<a
+						href='/profile/{{post.user_id}}'
+						style='color: #cba6f7; text-decoration: none;'
+					>
+						{{post.User.username}}
+					</a>
+					on
+					{{format_date post.date_created}}
+				</p>
+			</h3>
+			<p style='color: #cdd6f4;'>
+				{{post.content}}
+			</p>
+			<section class='text-right'>
+				<a href='/update_post/{{post.id}}'>
+					<button
+						class='btn btn-link'
+						id='update-post'
+						style='color: #cdd6f4;'
+					>
+						Update
+					</button>
+				</a>
+				<button
+					class='btn btn-danger'
+					id='delete-post'
+					data-did={{post.id}}
+					style='color: #cdd6f4;'
+				>
+					Delete
+				</button>
+			</section>
+			<hr class='rounded' style='color: #6c7086;' />
+		{{/each}}
+	</section>
+{{else}}
+	<section style='text-align: center;'>
+		<h3 style='color: #cdd6f4;'>No Posts</h3>
+	</section>
+{{/if}}
+<script src='/js/deletePost.js'></script>
